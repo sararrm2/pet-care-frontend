@@ -52,13 +52,19 @@ function App() {
   }, [])
 
 
+  const handleClick = (pet) => {
+ 
+    window.location.href = `/pet/${pet.id}`;
+  };
+
   return (
   
     <>
     <PetList>
-      <PetDetails>
+      
+      <PetDetails handleClick={handleClick} />
+      <Outlet />
     
-      </PetDetails>
     </PetList>
      
     </>
