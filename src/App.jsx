@@ -1,7 +1,9 @@
 import { useEffect } from "react"
 import { createOrUpdatePet, deletePet, getAllPets, getPetById } from "./services/main/pets"
-import PetList from "../components/PetList"
-import PetCard from "../components/PetList"
+import PetList from "./components/PetList"
+import { Link, Outlet, route } from 'react'
+import PetDetails from "./components/PetDetails";
+
 
 
 function App() {
@@ -51,10 +53,18 @@ function App() {
 
 
   return (
+  
     <>
-    <PetList></PetList>
-  </>
-  )
+    <PetList>
+      <PetDetails>
+    
+      </PetDetails>
+    </PetList>
+     
+    </>
+ 
+  );
 }
+export default App;
 
-export default App
+
