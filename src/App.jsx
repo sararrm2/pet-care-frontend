@@ -1,5 +1,8 @@
 import { useEffect } from "react"
 import { createOrUpdatePet, deletePet, getAllPets, getPetById } from "./services/main/pets"
+import PetList from "../components/PetList"
+import PetCard from "../components/PetList"
+
 
 function App() {
   useEffect(() => {
@@ -49,8 +52,8 @@ function App() {
 
   return (
     <>
-      <h1>Base project</h1>
-    </>
+    <PetList></PetList>
+  </>
   )
 }
 
